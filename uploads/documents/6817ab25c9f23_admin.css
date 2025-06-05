@@ -1,0 +1,329 @@
+/* General layout and spacing */
+body {
+    /* ใช้ gradient น้ำเงินไปแดงเป็นพื้นหลังทั้งหน้า */
+    background: linear-gradient(135deg, #003087 0%, #a10000 100%);
+    /* หรือใช้สีพื้นหลังน้ำเงินเข้มเดี่ยวๆ */
+    /* background-color: #003087; */
+    color: #ffffff; /* ตัวอักษรสีขาวเพื่อตัดกับพื้นหลัง */
+    padding-top: 5px; /* Height of the fixed navbar */
+}
+
+/* Main content */
+main {
+    /* พื้นหลังเนื้อหาหลักเป็นสีขาวเพื่อความชัดเจน */
+    background-color: #ffffff;
+    color: #000000; /* ตัวอักษรสีเข้มในเนื้อหาหลัก */
+    padding-top: 20px;
+    padding-bottom: 40px;
+    min-height: calc(100vh - 56px);
+    border-radius: 8px; /* เพิ่มขอบมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาเพื่อให้ดูเด่น */
+}
+
+/* Navbar styling */
+.navbar-dark.bg-dark {
+    /* เปลี่ยนสี navbar เป็นน้ำเงินเข้ม */
+    background-color: #003087 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-dark .nav-link {
+    color: #ffffff; /* ตัวอักษรสีขาว */
+}
+
+.navbar-dark .nav-link:hover {
+    color: #00ff15; /* เปลี่ยนเป็นแดงเมื่อ hover */
+}
+
+
+
+/* Card styling */
+.card {
+    /* พื้นหลังการ์ดเป็นสีขาว */
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    /* หัวการ์ดเป็นน้ำเงินเข้ม */
+    background-color: #003087;
+    color: #ffffff;
+    border-bottom: 1px solid #002060;
+}
+
+/* Table styling */
+.table thead th {
+    /* หัวตารางเป็นแดงเข้ม */
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: 2px solid #800000;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 48, 135, 0.05); /* น้ำเงินอ่อนสำหรับแถวคี่ */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* ขาวสำหรับแถวคู่ */
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(161, 0, 0, 0.1) !important; /* แดงอ่อนเมื่อ hover */
+}
+
+/* Alert styling */
+.alert-success {
+    background-color: #00874f; /* น้ำเงินสำหรับแจ้งเตือนความสำเร็จ */
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.alert-danger {
+    background-color: #a10000; /* แดงสำหรับแจ้งเตือนข้อผิดพลาด */
+    border-color: #800000;
+    color: #ffffff;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #003087; /* ปุ่มหลักเป็นน้ำเงิน */
+    border-color: #002060;
+}
+
+.btn-primary:hover {
+    background-color: #002060;
+    border-color: #001a40;
+}
+
+.btn-secondary {
+    background-color: #a10000; /* ปุ่มรองเป็นแดง */
+    border-color: #800000;
+}
+
+.btn-secondary:hover {
+    background-color: #800000;
+    border-color: #600000;
+}
+
+/* Status badges */
+.badge.bg-success {
+    background-color: #00874f !important; /* Badge ความสำเร็จเป็นน้ำเงิน */
+}
+
+.badge.bg-danger {
+    background-color: #a10000 !important; /* Badge ข้อผิดพลาดเป็นแดง */
+}
+
+.badge.bg-warning {
+    background-color: #ff6f61; /* สีส้มอ่อนสำหรับเตือน */
+}
+
+.badge.bg-primary {
+    background-color: #0052cc; /* น้ำเงินอ่อนสำหรับสถานะทั่วไป */
+}
+
+/* Job status */
+.job-status-open {
+    background-color: #003087; /* งานที่เปิดรับเป็นน้ำเงิน */
+    color: #ffffff;
+}
+
+.job-status-closed {
+    background-color: #a10000; /* งานที่ปิดเป็นแดง */
+    color: #ffffff;
+}
+
+
+/* Fix for success message overlapping with navbar */
+.alert-dismissible {
+    margin-top: 15px;
+}
+
+/* Container padding adjustments */
+.container-fluid {
+    padding-top: 15px;
+}
+
+/* Custom Thai font for better Thai language display */
+body, .form-control, .btn {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, 
+                 "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", 
+                 "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Sarabun", "Prompt", "TH Sarabun New";
+}   
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+.navbar {
+    padding: 0.25rem 1rem; /* ลด padding เพื่อให้ Navbar เล็กลง */
+    min-height: 50px; /* กำหนดความสูงขั้นต่ำของ Navbar */
+}
+
+/* ปรับ Site Name ให้ขยับขึ้นและจัดตำแหน่ง */
+.navbar-brand {
+    margin-top: 6px; /* ขยับขึ้นด้านบน */
+    margin-bottom: 5px; /* ลดช่องว่างด้านล่าง */
+    padding: 0.25rem 0; /* ลด padding เพื่อให้ดูสมดุล */
+}
+/* Navbar branding */
+.navbar-brand img {
+    max-height: 40px; /* กำหนดความสูงสูงสุดของโลโก้ */
+    width: auto; /* รักษาสัดส่วน */
+}
+
+.navbar-brand span {
+    font-size: 1.25rem; /* ขนาดตัวอักษรของ SITE_NAME */
+    color: #ffffff; /* สีขาวเพื่อตัดกับพื้นหลัง Navbar */
+    
+}
+html, body {
+    height: 100%; /* ให้ความสูงเต็มหน้าจอ */
+    margin: 0;
+    padding: 33px 0 0 0; /* ป้องกันการเลื่อนขึ้นไปที่ Navbar */
+    overflow-y: auto; /* ป้องกันการเลื่อนแนวตั้ง */
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+}
+
+.container-fluid {
+    height: 100%; /* ให้ container ใช้ความสูงเต็มหน้าจอ */
+    padding: 0; /* ลบ padding เพื่อให้เต็มขอบ */
+    margin: 0;
+}
+
+/* ปรับ Main Content ให้รองรับขนาดเต็มหน้าจอ */
+main {
+    min-height: calc(100vh - 50px); /* ปรับตามความสูงของ Navbar ที่เล็กลง */
+    width: 100%; /* ให้ Main Content เต็มความกว้าง */
+    box-sizing: border-box; /* ป้องกันการเกินขนาดจาก padding */
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #ffffff; /* เปลี่ยนสีพื้นหลังเป็นแดงเข้ม */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.2);
+    height: calc(100vh - 20px); /* ความสูงเต็มหน้าจอ ลบความสูงของ Navbar */
+    position: fixed;
+    top: 56px; /* อยู่ใต้ Navbar */
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar .sidebar-brand {
+    background-color: #003087; /* พื้นหลังของส่วนโลโก้เป็นน้ำเงินเข้ม */
+    padding: 10px;
+    color: #ffffff;
+    border-bottom: 1px solid #002060;
+    position: sticky;
+    top: 0;
+
+}
+
+.sidebar .sidebar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+
+.sidebar .sidebar-brand span {
+    font-size: 1.25rem;
+    color: #003087;
+}
+
+/* ปรับสีตัวอักษรและพื้นหลังของเมนู */
+.sidebar .nav-link {
+    color: #003087; /* ตัวอักษรสีขาว */
+    border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #f1f1f1; /* เปลี่ยนเป็นน้ำเงินเมื่อ hover */
+    border-left: 3px solid #ffffff;
+}
+
+.sidebar .nav-link.active {
+    color: #ffffff;
+    background-color: #003087; /* ไฮไลต์เป็นน้ำเงินเมื่อเลือก */
+    border-left: 3px solid #ffffff;
+}
+
+/* ปรับแต่งสำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 767.98px) {
+    .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+        top: 56px;
+
+    }
+
+    .sidebar {
+        width: 250px;
+        transform: translateX(0);
+        top: 56px;
+        
+    }
+    .sidebar.show {
+        transform: translateX(0);
+    }
+}
+
+/* ปรับแต่ง Main Content */
+main {
+    background-color: #ffffff;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    min-height: calc(120vh - 20px);
+    border-radius: 8px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 0;
+    margin-left: 0;
+
+}
+
+@media (min-width: 768px) {
+    main {
+        margin-left: 250px;
+    }
+}
+
+
+#exportTable {
+    font-family: 'THSarabunNew', Arial, sans-serif;
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+#exportTable h2, #exportTable p {
+    font-family: 'THSarabunNew', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+#exportTable table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#exportTable th, #exportTable td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+    font-family: 'THSarabunNew', Arial, sans-serif;
+}
+
+#exportTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+/* Ensure SweetAlert2 modals appear above the navbar */
+.fas, .far, .fab {
+    font-family: 'Font Awesome 6 Free', sans-serif !important;
+    display: inline-block; /* ป้องกันการหายไปของไอคอน */
+}
